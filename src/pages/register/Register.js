@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import "./register.css"
 
 export default function Register() {
-;
+
     const [registerEmail, setRegisterEmail] = useState("")
     const [registerPassword, setRegisterPassword] = useState("");
 
