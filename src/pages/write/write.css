@@ -46,12 +46,12 @@
 
 .writeText {
     font-size: 20px;
-    height: 100vh;
+    height: 80vh;
 }
 
 .writeSubmit {
     position: absolute;
-    top: 20px;
+    top: 45px;
     right: 50px;
     color: white;
     background-color: teal;
@@ -60,4 +60,23 @@
     border-radius: 10px;
     cursor: pointer;
     font-size: 16px;
+}
+
+.date {
+    display: flex;
+    margin: 10px 20px;
+}
+
+.dateInput {
+    margin-left: auto;
+    padding: 5px 10px;
+    border: 1px solid rgb(201, 199, 199);
+    border-radius: 10px;
+    font-style: italic;
+    font-size: 17px;
+    width: 10vw;
+}
+
+.dateInput:focus {
+    outline: 0;
 }

@@ -3,6 +3,7 @@ import axios from "axios";
 import "./posts.css";
 import Post from "../post/Post";
 import { firebaseConfig } from "../../firebase-config";
+
 export default function Posts() {
     const [posts, setPosts] = useState([]);
 
@@ -22,7 +23,7 @@ export default function Posts() {
     },[]); 
     return (
         <div className="posts">
-            {posts.map(item=> <Post key={item.id} id={item.id} title={item.title} text={item.text} />)}
+            {posts.map(item=> <Post key={item.id} id={item.id} title={item.title} text={item.text} date={item.date} />)}
         </div>
     )
 }

@@ -50,3 +50,8 @@
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
 }
+
+.singlePostIcon {
+    border: none;
+    margin-left: auto;
+}

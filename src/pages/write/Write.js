@@ -9,12 +9,14 @@ import {useState} from 'react';
 export default function Write() {
     const [text, setText] = useState()
     const [title, setTitle] = useState()
+    const [date, setDate] = useState()
 
     const writeSubmit = async () => {
         try {
             const data = {
                 text,
-                title
+                title,
+                date
             }
             await axios.post("https://blogproject-eb957-default-rtdb.europe-west1.firebasedatabase.app/data.json",data, firebaseConfig)
        
@@ -31,6 +33,9 @@ export default function Write() {
                 className="writeImg"
             />
             <form className="writeForm">
+                <div className="date">
+                    <input type="date" className="dateInput" onChange={(e)=>setDate(e.target.value)} />
+                </div>
                 <div className="writeFormGroup">
                     <label className="fileInput">
                         <i className="writeIcon fas fa-plus"></i>
@@ -40,7 +45,6 @@ export default function Write() {
                 </div>
                 <div>
                     <textarea placeholder="Tell your story..." type="text" onChange={(e)=>setText(e.target.value)} className="writeInput writeText"></textarea>
-               
                 </div>
                 <button type="button" className="writeSubmit" onClick={writeSubmit}>Publish</button>
             </form>

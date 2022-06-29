@@ -1,8 +1,15 @@
-import React from "react";
 import "./post.css";
 import postPhoto from "../../assets/postPhoto.jpg"
 import {Link} from "react-router-dom"
+import { firebaseConfig } from "../../firebase-config";
+import axios from "axios";
+
 export default function Post(props) {
+
+       async function deleteButton(){
+            await axios.delete(`https://blogproject-eb957-default-rtdb.europe-west1.firebasedatabase.app/data/${props.id}.json`, firebaseConfig)
+    } 
+
     return (
         <div className="post">
             <img 
@@ -17,11 +24,12 @@ export default function Post(props) {
                 </div>
                 <Link className="postTitle" to={`/post/${props.id}`}>{props.title}</Link>
                 <hr />
-                <span className="postDate">1 hour ago</span>
+                <span className="postDate">{props.date}</span>
             </div>
             <p className="postDesc">
                 {props.text}    
             </p>
+            <button className="singlePostIcon far fa-trash-alt" onClick={deleteButton}></button>
         </div>
     )
 }

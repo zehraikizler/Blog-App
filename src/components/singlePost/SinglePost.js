@@ -38,11 +38,11 @@ export default function SinglePost() {
                     <span className="singlePostAuthor">
                         Author: <b>Zehra</b>
                     </span>
-                    <span className="singlePostDate">1 hour ago</span>
+                    <span className="singlePostDate">{post.date}</span>
                 </div>
                 <p className="singlePostDesc">
                     {post.text}
-                     </p>
+                </p>
             </div>
         </div>
     )
