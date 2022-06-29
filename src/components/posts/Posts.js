@@ -23,7 +23,7 @@ export default function Posts() {
     },[]); 
     return (
         <div className="posts">
-            {posts.map(item=> <Post key={item.id} id={item.id} title={item.title} text={item.text} date={item.date} />)}
+            {posts.map(item=> <Post key={item.id} id={item.id} title={item.title} text={item.text} date={item.date} author={item.author} />)}
         </div>
     )
 }

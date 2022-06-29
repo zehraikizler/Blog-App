@@ -80,3 +80,23 @@
 .dateInput:focus {
     outline: 0;
 }
+
+.author {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.authorInput {
+    text-align: center;
+    padding: 10px 10px;
+    border: 1px solid rgb(201, 199, 199);
+    border-radius: 10px;
+    font-style: italic;
+    font-size: 18px;
+    width: 25vw;
+}
+
+.authorInput:focus {
+    outline: 0;
+}

@@ -7,6 +7,7 @@ import {
     BrowserRouter as Router,
     useParams
   } from "react-router-dom";
+
 export default function SinglePost() {
       let { postId } = useParams();
       const [post, setPost] = useState([]);
@@ -19,6 +20,7 @@ export default function SinglePost() {
         fetchData()
         
     },[]); 
+
     return (
         <div className="singlePost">
             <div className="singlePostWrapper">
@@ -36,7 +38,7 @@ export default function SinglePost() {
                 </h1>
                 <div className="singlePostInfo">
                     <span className="singlePostAuthor">
-                        Author: <b>Zehra</b>
+                        Author: <b>{post.author}</b>
                     </span>
                     <span className="singlePostDate">{post.date}</span>
                 </div>

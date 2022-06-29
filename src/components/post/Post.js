@@ -29,7 +29,10 @@ export default function Post(props) {
             <p className="postDesc">
                 {props.text}    
             </p>
-            <button className="singlePostIcon far fa-trash-alt" onClick={deleteButton}></button>
+            <div className="postFooter">
+                <span className="author">{props.author}</span>
+                <button className="postIcon far fa-trash-alt" onClick={deleteButton}></button>
+            </div>
         </div>
     )
 }
